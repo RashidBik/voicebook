@@ -76,9 +76,9 @@
    <div class=" relative w-40" on:drop={handleDrop} on:dragover={event => event.preventDefault()}>
     <p class="hidden md:inline-block text-center text-xs ">Drag and drop a file here or click the button to select a file.</p>
      <img class="rounded-full border w-40 h-40 object-cover bg-slate-300 " src={imageUrl && imageUrl} />
-    <div class="w-10 h-10 rounded-full bg-red-800 absolute right-0 bottom-1 ">
-       <div class="relative"> <span class=" absolute top-2 left-4 text-white font-bold text-xl">+</span></div>
-        <input class=" opacity-0 w-10 h-10  " type="file" name="profile" on:change={handleFileInput}>
+    <div class="w-10 h-10 rounded-full bg-indigo-600 absolute right-0 bottom-1 ">
+        <div class="relative"> <span class=" absolute top-2 left-4 text-white font-bold text-xl">+</span></div>
+        <input class="opacity-0 w-10 h-10 " type="file" name="profile" on:change={handleFileInput}>
     </div>
    </div>
     <h2>UPLOAD YOUR PROFILE PICTURE</h2>
