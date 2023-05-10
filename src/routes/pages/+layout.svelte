@@ -11,24 +11,24 @@
         </ul>
         <ul class="flex space-x-3">
             <Icon icon="ion:earth" />
-            <Icon icon="tabler:menu-2" />
+            <Icon class="text-xl" icon="tabler:menu-2" />
         </ul>
     </header>
-    <div class="flex justify-evenly p-2 shadow  ">
+    <div class="flex justify-evenly p-2 shadow items-baseline  ">
         <a class="{active === 'home' && "shadow"} shadow-black" on:click={()=> active = 'home'} href="/pages">
-            <Icon icon="oi:list-rich" />
+            <Icon class="text-lg" icon="oi:list-rich" />
         </a>
         <a class="{active === 'table' && 'shadow'} shadow-black" on:click={()=> active = 'table'} href="/pages/table">
-            <Icon icon="bi:grid-3x3-gap-fill" />
+            <Icon class="text-lg" icon="bi:grid-3x3-gap-fill" />
         </a>
         <a class="{active === 'lock' && 'shadow'} shadow-black" on:click={()=> active = 'lock'} href="/pages/lock">
-            <Icon icon="material-symbols:lock" />
+            <Icon class="text-lg" icon="material-symbols:lock" />
         </a>
         <a class="{active === 'plus' && 'shadow'} shadow-black" on:click={()=> active = 'plus'} href="/pages/plus">
-            <Icon icon="mdi:plus-thick" />
+            <Icon class="text-2xl" icon="mdi:plus-thick" />
         </a>
         <a class="{active === 'profile' && 'shadow'} shadow-black" on:click={()=> active = 'profile'} href="/pages/profile">
-            <Icon icon="mdi:user" />
+            <Icon  class="text-2xl" icon="mdi:user" />
         </a>
     </div>
 </div>

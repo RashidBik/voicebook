@@ -8,3 +8,12 @@
         @apply list-none;
     } 
 }
+
+@keyframes swipe {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-30px); }
+}
+
+.swipe {
+  animation: swipe 1s ease-out 3;
+}
