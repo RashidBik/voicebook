@@ -1,0 +1,12 @@
+export const load = async ({fetch}) =>
+{
+    let result;
+    let error;
+    const response = await fetch('http://localhost:3030/user')
+    if (response.status === 200) {
+        result = response.json();
+    } else {
+         error = response.json();        
+    }
+    return {result}
+}

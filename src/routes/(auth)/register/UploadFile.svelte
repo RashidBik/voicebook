@@ -1,6 +1,10 @@
 <script>
 // @ts-nocheck
 
+  import { createEventDispatcher } from "svelte";
+
+// @ts-nocheck
+
     /**
    * @type {any}
    */
@@ -11,6 +15,11 @@
   let imageUrl;
   $: fileUploadError =  ''
 
+  const dispatcher = createEventDispatcher();
+
+   /**
+   * @param {{ preventDefault: () => void; dataTransfer: { files: Iterable<any> | ArrayLike<any>; }; }} event
+   */
    function handleDrop(event) {
     event.preventDefault();
     file = Array.from(event.dataTransfer.files);
@@ -18,12 +27,18 @@
      imageUrl = URL.createObjectURL(file[0]);
   }
 
+  /**
+   * @param {{ target: { files: any[]; }; }} event
+   */
   function handleFileInput(event) {
     file = event.target.files[0];
-    typeCheck(file);    
+    typeCheck(file);  
     imageUrl = URL.createObjectURL(file);
   }
 
+  /**
+   * @param {Blob | null} file
+   */
   function typeCheck(file) {
      const reader = new FileReader();
     reader.onload = () => {
@@ -67,7 +82,9 @@
       fileReader.readAsArrayBuffer(blob);
 
     };
+    // @ts-ignore
     reader.readAsArrayBuffer(file); 
+    dispatcher('profile', file)
   }
 </script>
 
