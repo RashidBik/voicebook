@@ -16,19 +16,19 @@
     </header>
     <div class="flex justify-evenly p-2 shadow items-baseline  ">
         <a class="{active === 'home' && "shadow"} shadow-black" on:click={()=> active = 'home'} href="/pages">
-            <Icon class="text-lg" icon="oi:list-rich" />
+            <Icon class="text-lg" icon="oi:list-rich" />home
         </a>
         <a class="{active === 'table' && 'shadow'} shadow-black" on:click={()=> active = 'table'} href="/pages/table">
-            <Icon class="text-lg" icon="bi:grid-3x3-gap-fill" />
+            <Icon class="text-lg" icon="bi:grid-3x3-gap-fill" />table
         </a>
         <a class="{active === 'lock' && 'shadow'} shadow-black" on:click={()=> active = 'lock'} href="/pages/lock">
-            <Icon class="text-lg" icon="material-symbols:lock" />
+            <Icon class="text-lg" icon="material-symbols:lock" />lock
         </a>
         <a class="{active === 'plus' && 'shadow'} shadow-black" on:click={()=> active = 'plus'} href="/pages/plus">
-            <Icon class="text-2xl" icon="mdi:plus-thick" />
+            <Icon class="text-2xl" icon="mdi:plus-thick" />plus
         </a>
         <a class="{active === 'profile' && 'shadow'} shadow-black" on:click={()=> active = 'profile'} href="/pages/profile">
-            <Icon  class="text-2xl" icon="mdi:user" />
+            <Icon  class="text-2xl" icon="mdi:user" />profile
         </a>
     </div>
 </div>

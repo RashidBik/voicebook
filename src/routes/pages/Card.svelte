@@ -1,6 +1,7 @@
 <script>
     import Icon from '@iconify/svelte';
    let imageUrl = '';
+// @ts-ignore
 const handleChange = (ev) => {
     ev.preventDefault();
     let file = ev.target.files[0];
