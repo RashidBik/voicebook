@@ -1,15 +1,15 @@
 <script>
-  import { goto } from '$app/navigation';
     import Icon from '@iconify/svelte';
    let imageUrl = '';
 // @ts-ignore
-const handleChange = (ev) => {
-    ev.preventDefault();
-    let file = ev.target.files[0];
-    imageUrl = URL.createObjectURL(file)
-}
+// const handleChange = (ev) => {
+//     ev.preventDefault();
+//     let file = ev.target.files[0];
+//     imageUrl = URL.createObjectURL(file)
+// }
 </script>
-<div class="h-72 w-[100vw] my-3 p-2 shadow relative">
+<div class="bg-gray-800 h-[100vh]">
+    <div class="h-72 w-[100vw] my-3 p-2 shadow relative">
     <header class="flex absolute  w-[96%] pr-8  z-20">
         <div class="h-10 w-10 rounded-full bg-gray-100 border-t-2 border-l-2 border-gray-400 object-cover flex justify-center items-center">👸</div>
         <div class=" px-2">
@@ -30,15 +30,12 @@ const handleChange = (ev) => {
             <p class="w-[60%] h-full overflow-y-auto px-2 py-3 text-sm bg-[#ffffff47] selection:bg-slate-800 selection:text-slate-200 selection:mix-blend-multiply ">Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis veniam debitis temporibus. Illo placeat pariatur fugit architecto dicta quas nostrum ut dolores cumque repellendus, aliquid ab harum eum suscipit vero. ipsum dolor sit amet consectetur, adipisicing elit. Expedita deserunt molestiae minima consequatur quidem facilis asperiores ut, nisi cum, totam aliquam ratione facere rerum quae. Vitae in adipisci accusantium. A?</p>
             <div class="flex flex-col justify-center items-center p-2 w-[40%]">
                 <img class="w-20 h-20 object-cover rounded-full bg-yellow-800 ring ring-red-800" src="" alt="">
-                <input class=" absolute" type="file" name="" id="" on:change={handleChange}>
                 <small class="text-xs bg-[#ffffff47]">00:00  00:00</small>
                 <p>Title</p>
                 <div class="w-full h-8 mt-auto bg-[#eeeeee47] ring-1 flex justify-evenly items-center">
                     <Icon class="text-blck text-lg" icon="material-symbols:share-outline" />
                     <Icon class="text-blck text-lg" icon="ic:file-download" />
-                    <div on:click={() => goto('/pages/chat')}>
-                        <Icon class="text-blck text-lg hover:cursor-pointer" icon="ph:chat-circle-dots-fill" />
-                    </div> 
+                    <Icon class="text-blck text-lg" icon="ph:chat-circle-dots-fill" />
                     <Icon class="text-blck text-lg" icon="material-symbols:add-reaction-outline" /> 
                 </div>
             </div>
@@ -62,4 +59,5 @@ const handleChange = (ev) => {
             </button>
         </div>
     </footer>
+</div>
 </div>
