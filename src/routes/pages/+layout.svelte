@@ -1,4 +1,5 @@
 <script>
+  import { goto } from '$app/navigation';
     import Icon from '@iconify/svelte';
 
     $: active = 'home'
@@ -11,7 +12,7 @@
         </ul>
         <ul class="flex space-x-3">
             <Icon icon="ion:earth" />
-            <Icon class="text-xl" icon="tabler:menu-2" />
+            <div on:click={()=> goto('/pages/menu')}><Icon class="text-xl" icon="tabler:menu-2" /></div>
         </ul>
     </header>
     <div class="flex justify-evenly p-2 shadow items-baseline  ">
