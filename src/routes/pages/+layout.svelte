@@ -7,12 +7,12 @@
 <div>
     <header class="flex justify-between p-3">
         <ul class="flex space-x-3">
-            <li class="flex font-bold">VoiceBook</li>
+            <li on:click={()=> goto('/howto')} class="flex font-bold">VoiceBook</li>
             <Icon icon="material-symbols:search" />
         </ul>
         <ul class="flex space-x-3">
             <Icon icon="ion:earth" />
-            <div on:click={()=> goto('/pages/menu')}><Icon class="text-xl" icon="tabler:menu-2" /></div>
+            <div on:click={()=> goto('/menu')}><Icon class="text-xl" icon="tabler:menu-2" /></div>
         </ul>
     </header>
     <div class="flex justify-evenly p-2 shadow items-baseline  ">
